@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/template
+    username: sa
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+# ???? : http://localhost:8080/swagger-ui/index.html#/
+  springdoc:
+    swagger-ui:
+      path: /swagger-ui.html
+      disable-swagger-default-url: true
+      display-request-duration: true
+      operations-sorter: alpha
+    default-consumes-media-type: application/json;charset=UTF-8
+    default-produces-media-type: application/json;charset=UTF-8
+logging:
+  level:
+    org.hibernate.SQL: debug
